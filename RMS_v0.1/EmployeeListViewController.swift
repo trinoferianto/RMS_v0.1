@@ -8,8 +8,40 @@
 
 import UIKit
 
-class EmployeeListViewController: UIViewController {
+class EmployeeListViewController: UIViewController{
     
     @IBOutlet var tableView : UITableView!
+    
+    var datas : [[ String : AnyObject]] = [
+        [
+            "name"     : "Zulfikar",
+            "grade"    : "SE-PG",
+            "project"  : "CDC",
+            "office"   : "Bandung",
+            "phone"    : "0389484949"
+        ],
+        [
+            "name"     : "Zulfikar",
+            "grade"    : "SE-PG",
+            "project"  : "CDC",
+            "office"   : "Bandung",
+            "phone"    : "0389484949"
+        ],
+        [
+            "name"     : "Zulfikar",
+            "grade"    : "SE-PG",
+            "project"  : "CDC",
+            "office"   : "Bandung",
+            "phone"    : "0389484949"
+        ],
+        [
+            "name"     : "Zulfikar",
+            "grade"    : "SE-PG",
+            "project"  : "CDC",
+            "office"   : "Bandung",
+            "phone"    : "0389484949"
+        ],
+
+    ]
 
 }
