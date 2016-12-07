@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: Properties
     @IBOutlet weak var usernameTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var rememberMeCheckbox: UIImageView!
@@ -27,6 +28,36 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    // MARK: Actions
+//    @IBAction func loginButtonClicked(sender: UIButton) {
+//        if ((usernameTextField.text?.isEmpty) != nil) {
+//            usernameTextField.errorEntry = true
+//        }
+//        
+//        if passwordTextField.text?.isEmpty != nil {
+//            passwordTextField.errorEntry = true
+//        }
+//        
+//        /*if usernameTextField.errorEntry == true || passwordTextField.errorEntry == true {
+//            let alert = UIAlertController(title: "Error", message: "Please check your Username and Password", preferredStyle: .Alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//            self.presentViewController(alert, animated: true, completion: nil)
+//        }*/
+//    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier! == "Login" && loginButton === sender && usernameTextField.text?.isEmpty == false && (passwordTextField.text?.isEmpty) == false {
+            self.performSegueWithIdentifier("Login", sender: loginButton)
+        }
+        else {
+            if usernameTextField.text?.isEmpty == true {
+                usernameTextField.errorEntry = true
+            }
+            
+            if passwordTextField.text?.isEmpty == true {
+                passwordTextField.errorEntry = true
+            }
+        }
+    }
 }
 
