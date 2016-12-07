@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        navigationController?.navigationBar.translucent = true
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 92/255, green: 107/255, blue: 192/255, alpha: 1)
         
     }
 
