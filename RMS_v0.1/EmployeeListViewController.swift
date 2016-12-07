@@ -9,5 +9,7 @@
 import UIKit
 
 class EmployeeListViewController: UIViewController {
+    
+    @IBOutlet var tableView : UITableView!
 
 }

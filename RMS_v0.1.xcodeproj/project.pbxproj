@@ -61,11 +61,11 @@
 				CF1FDEE81DF64E9700277839 /* AppDelegate.swift */,
 				CF1FDEEA1DF64E9700277839 /* ViewController.swift */,
 				CF1FDEEC1DF64E9700277839 /* Main.storyboard */,
+				5D2EA9FA1DF6A81100EDB081 /* EmployeeListViewController.swift */,
 				CF1FDEFA1DF6828300277839 /* CustomTextField.swift */,
 				CF1FDEEF1DF64E9700277839 /* Assets.xcassets */,
 				CF1FDEF11DF64E9700277839 /* LaunchScreen.storyboard */,
 				CF1FDEF41DF64E9700277839 /* Info.plist */,
-				5D2EA9FA1DF6A81100EDB081 /* EmployeeListViewController.swift */,
 			);
 			path = RMS_v0.1;
 			sourceTree = "<group>";

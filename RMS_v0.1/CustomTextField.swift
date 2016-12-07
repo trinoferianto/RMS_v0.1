@@ -75,7 +75,7 @@ import UIKit
              if (txtImage != nil)
              {
                  let imgView = UIImageView(image: txtImage)
-                 imgView.frame = CGRectMake(0, 0, CGFloat(imageWidth), self.frame.height)
+                 imgView.frame = CGRectMake(0, 0, CGFloat(imageWidth), self.frame.height-5)
                  imgView.contentMode = .Center
                  self.leftViewMode = UITextFieldViewMode.Always
                  self.leftView = imgView
