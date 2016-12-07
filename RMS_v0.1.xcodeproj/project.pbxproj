@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D2EA9FB1DF6A81100EDB081 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EA9FA1DF6A81100EDB081 /* EmployeeListViewController.swift */; };
 		CF1FDEE91DF64E9700277839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1FDEE81DF64E9700277839 /* AppDelegate.swift */; };
 		CF1FDEEB1DF64E9700277839 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1FDEEA1DF64E9700277839 /* ViewController.swift */; };
 		CF1FDEEE1DF64E9700277839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1FDEEC1DF64E9700277839 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D2EA9FA1DF6A81100EDB081 /* EmployeeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
 		CF1FDEE51DF64E9700277839 /* RMS_v0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMS_v0.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1FDEE81DF64E9700277839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF1FDEEA1DF64E9700277839 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CF1FDEEF1DF64E9700277839 /* Assets.xcassets */,
 				CF1FDEF11DF64E9700277839 /* LaunchScreen.storyboard */,
 				CF1FDEF41DF64E9700277839 /* Info.plist */,
+				5D2EA9FA1DF6A81100EDB081 /* EmployeeListViewController.swift */,
 			);
 			path = RMS_v0.1;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2EA9FB1DF6A81100EDB081 /* EmployeeListViewController.swift in Sources */,
 				CF1FDEEB1DF64E9700277839 /* ViewController.swift in Sources */,
 				CF1FDEE91DF64E9700277839 /* AppDelegate.swift in Sources */,
 				CF1FDEFB1DF6828300277839 /* CustomTextField.swift in Sources */,
@@ -256,6 +260,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RMS_v0.1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtmac19.RMS-v0-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -267,6 +272,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RMS_v0.1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtmac19.RMS-v0-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +298,7 @@
 				CF1FDEF91DF64E9700277839 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

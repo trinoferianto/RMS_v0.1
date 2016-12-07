@@ -10,19 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameTextField: CustomTextField!
+    @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var rememberMeCheckbox: UIImageView!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var forgetPasswordLabel: UILabel!
+    @IBOutlet weak var forgetPasswordLabel: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let img = UIImageView(: UIImage)
-        usernameTextField.leftViewMode = UITextFieldViewMode.Always
-        usernameTextField.leftView =
     }
 
     override func didReceiveMemoryWarning() {
