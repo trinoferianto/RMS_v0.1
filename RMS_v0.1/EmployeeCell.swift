@@ -19,6 +19,7 @@ class EmployeeCell: UITableViewCell {
             nameLabel.text = employee.name
             gradeAndProjectLabel.text = employee.grade! + ", " + employee.project!
             locationAndPhoneLabel.text = employee.location! + ", " + employee.phone!
+            employeeImage.image = UIImage(named: "username_icon")
         }
     }
     

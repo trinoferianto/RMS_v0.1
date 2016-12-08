@@ -9,11 +9,17 @@
 import UIKit
 
 class EmployeesViewController: UITableViewController {
+    @IBOutlet weak var employeeCountTextField: UITextField!
+    
     var employees:[Employee] = [
         Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917"),
         Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917"),
         Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917")
     ]
+    
+    override func viewDidLoad() {
+        employeeCountTextField.text = String(employees.count)
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return employees.count
