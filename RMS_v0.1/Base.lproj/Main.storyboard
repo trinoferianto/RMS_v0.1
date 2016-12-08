@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7cW-0y-OS0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7cW-0y-OS0">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -117,7 +117,6 @@
                                     <constraint firstItem="ofe-6k-aIN" firstAttribute="top" secondItem="BcF-Nz-HJE" secondAttribute="top" constant="23" id="1mn-MM-uk9"/>
                                     <constraint firstItem="nJS-xr-lWq" firstAttribute="leading" secondItem="BcF-Nz-HJE" secondAttribute="leading" constant="8" id="4aI-w0-sSk"/>
                                     <constraint firstAttribute="trailing" secondItem="yfY-GC-ILS" secondAttribute="trailing" constant="8" id="5Ri-n8-nBV"/>
-                                    <constraint firstItem="9DE-Vb-VKq" firstAttribute="top" secondItem="yfY-GC-ILS" secondAttribute="bottom" constant="8" id="9Ey-aC-S9u"/>
                                     <constraint firstAttribute="trailing" secondItem="nJS-xr-lWq" secondAttribute="trailing" constant="8" id="C3v-vv-P1a"/>
                                     <constraint firstItem="ofe-6k-aIN" firstAttribute="leading" secondItem="BcF-Nz-HJE" secondAttribute="leading" constant="8" id="HZt-z6-Tew"/>
                                     <constraint firstAttribute="trailing" secondItem="ofe-6k-aIN" secondAttribute="trailing" constant="8" id="Jno-3Q-mIb"/>
@@ -158,6 +157,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vm4-DE-jnP"/>
             </objects>
             <point key="canvasLocation" x="1032" y="418"/>
         </scene>
