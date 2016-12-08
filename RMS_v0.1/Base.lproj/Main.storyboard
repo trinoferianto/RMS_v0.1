@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7cW-0y-OS0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -162,15 +163,52 @@
             <objects>
                 <tableViewController id="g91-gZ-0Iq" customClass="EmployeesViewController" customModule="RMS_v0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="Srm-3r-gGc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="U5d-cx-HAo">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9999" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxN-YA-wdI">
+                                    <rect key="frame" x="317" y="7" width="50" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Filter" translatesAutoresizingMaskIntoConstraints="NO" id="ktc-bm-8S1">
+                                    <rect key="frame" x="284" y="9" width="25" height="25"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Sorting Answers Filled" translatesAutoresizingMaskIntoConstraints="NO" id="IP4-tX-zoP">
+                                    <rect key="frame" x="251" y="9" width="25" height="25"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Search Filled" translatesAutoresizingMaskIntoConstraints="NO" id="3Xa-AH-JYv">
+                                    <rect key="frame" x="8" y="9" width="25" height="25"/>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9O-QO-pAI">
+                                    <rect key="frame" x="41" y="6" width="202" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" red="0.36078431372549019" green="0.41960784313725491" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ktc-bm-8S1" secondAttribute="bottom" constant="10" id="4VC-Kv-AmQ"/>
+                                <constraint firstAttribute="bottom" secondItem="3Xa-AH-JYv" secondAttribute="bottom" constant="10" id="Ca1-8d-mpx"/>
+                                <constraint firstItem="3Xa-AH-JYv" firstAttribute="leading" secondItem="U5d-cx-HAo" secondAttribute="leading" multiplier="2" constant="10" id="IOq-EY-AXS"/>
+                                <constraint firstItem="S9O-QO-pAI" firstAttribute="leading" secondItem="3Xa-AH-JYv" secondAttribute="trailing" constant="10" id="ac9-Ta-is4"/>
+                                <constraint firstItem="3Xa-AH-JYv" firstAttribute="top" secondItem="U5d-cx-HAo" secondAttribute="top" constant="10" id="dVW-mO-IgO"/>
+                                <constraint firstAttribute="trailing" secondItem="zxN-YA-wdI" secondAttribute="trailing" constant="10" id="gYm-7E-2cr"/>
+                                <constraint firstItem="zxN-YA-wdI" firstAttribute="leading" secondItem="ktc-bm-8S1" secondAttribute="trailing" constant="10" id="glX-sl-9cV"/>
+                                <constraint firstItem="ktc-bm-8S1" firstAttribute="leading" secondItem="IP4-tX-zoP" secondAttribute="trailing" constant="10" id="rOa-re-mg9"/>
+                                <constraint firstItem="ktc-bm-8S1" firstAttribute="top" secondItem="U5d-cx-HAo" secondAttribute="top" constant="10" id="rPI-Uz-DjQ"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="topRight" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EmployeeCell" rowHeight="70" id="nKf-rL-NgT" customClass="EmployeeCell" customModule="RMS_v0_1" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nKf-rL-NgT" id="1xz-fb-Czj">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Eu-IL-Bji">
@@ -209,11 +247,16 @@
                             <outlet property="delegate" destination="g91-gZ-0Iq" id="kk7-44-Jir"/>
                         </connections>
                     </tableView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="employeeCountTextField" destination="zxN-YA-wdI" id="ABF-R4-D6B"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhx-kQ-kDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1718" y="492"/>
+            <point key="canvasLocation" x="1717.5" y="491.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yfz-EH-HLJ">
@@ -241,6 +284,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Filter" width="25" height="25"/>
+        <image name="Search Filled" width="25" height="25"/>
+        <image name="Sorting Answers Filled" width="25" height="25"/>
         <image name="checked_checkbox" width="24" height="24"/>
         <image name="password_icon" width="24" height="24"/>
         <image name="unchecked_checkbox" width="24" height="24"/>
