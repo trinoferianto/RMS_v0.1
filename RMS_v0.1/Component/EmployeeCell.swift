@@ -9,17 +9,17 @@
 import UIKit
 
 class EmployeeCell: UITableViewCell {
-    @IBOutlet weak var employeeImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var gradeAndProjectLabel: UILabel!
     @IBOutlet weak var locationAndPhoneLabel: UILabel!
- 
+    @IBOutlet weak var employeeImageView: UIImageView!
+    
     var employee: Employee! {
         didSet{
             nameLabel.text = employee.name
             gradeAndProjectLabel.text = employee.grade! + ", " + employee.project!
             locationAndPhoneLabel.text = employee.location! + ", " + employee.phone!
-            employeeImage.image = UIImage(named: "username_icon")
+            employeeImageView.image = UIImage(named: "username_icon")
         }
     }
     
