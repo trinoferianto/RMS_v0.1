@@ -11,6 +11,7 @@ import UIKit
 class EmployeesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var employeeCountTextField: UITextField!
     @IBOutlet weak var employeesTableView: UITableView!
+    @IBOutlet weak var employeeCounter: UITextField!
     
     var employees:[Employee] = [
         Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917"),
@@ -21,6 +22,7 @@ class EmployeesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         employeesTableView.delegate = self
         employeesTableView.dataSource = self
+        employeeCounter.text = String(employees.count)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
