@@ -12,6 +12,7 @@ class EmployeeCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var gradeAndProjectLabel: UILabel!
     @IBOutlet weak var locationAndPhoneLabel: UILabel!
+    @IBOutlet weak var joinDateLabel: UILabel!
     @IBOutlet weak var employeeImageView: UIImageView!
     
     var employee: Employee! {
@@ -19,6 +20,11 @@ class EmployeeCell: UITableViewCell {
             nameLabel.text = employee.name
             gradeAndProjectLabel.text = employee.grade! + ", " + employee.project!
             locationAndPhoneLabel.text = employee.location! + ", " + employee.phone!
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "dd MMM yyyy"
+            //            dateFormatter.dateStyle = NSDateFormatterStyle.FullStyle
+            joinDateLabel.text = dateFormatter.stringFromDate(employee.joinDate!)
         }
     }
     

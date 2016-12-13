@@ -592,11 +592,11 @@
                                 <rect key="frame" x="0.0" y="114" width="600" height="442"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="EmployeeCell" rowHeight="70" id="IJq-co-kxL" customClass="EmployeeCell" customModule="RMS_v0_1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="EmployeeCell" rowHeight="70" id="IJq-co-kxL" customClass="EmployeeCell" customModule="RMS_v0_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IJq-co-kxL" id="kft-HU-AwQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBp-hk-ghz">
@@ -650,23 +650,48 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forward_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tEZ-4G-YRq">
+                                                    <rect key="frame" x="577" y="39" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="7NY-fp-wyF"/>
+                                                        <constraint firstAttribute="width" constant="15" id="7Vn-MV-7iS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JoinDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksR-HI-6y3">
+                                                    <rect key="frame" x="392" y="16" width="200" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="nSI-ND-W26"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tEZ-4G-YRq" secondAttribute="bottom" constant="7.5" id="3dd-WM-KsT"/>
                                                 <constraint firstItem="I5S-Dr-nIK" firstAttribute="height" secondItem="NBp-hk-ghz" secondAttribute="height" id="6DG-Vc-g5X"/>
+                                                <constraint firstItem="ksR-HI-6y3" firstAttribute="width" secondItem="NBp-hk-ghz" secondAttribute="width" id="6go-eS-EVQ"/>
                                                 <constraint firstItem="tMR-IW-eRG" firstAttribute="centerY" secondItem="kft-HU-AwQ" secondAttribute="centerY" id="6hd-Bo-GIa"/>
                                                 <constraint firstItem="tMR-IW-eRG" firstAttribute="top" secondItem="NBp-hk-ghz" secondAttribute="bottom" id="A3Y-4X-fhd"/>
+                                                <constraint firstItem="ksR-HI-6y3" firstAttribute="top" secondItem="NBp-hk-ghz" secondAttribute="top" id="C9Q-v7-ghB"/>
                                                 <constraint firstItem="tMR-IW-eRG" firstAttribute="height" secondItem="NBp-hk-ghz" secondAttribute="height" id="Dgc-Dy-AjO"/>
                                                 <constraint firstItem="I5S-Dr-nIK" firstAttribute="top" secondItem="NBp-hk-ghz" secondAttribute="bottom" id="EHx-6r-OnP"/>
+                                                <constraint firstItem="tEZ-4G-YRq" firstAttribute="trailing" secondItem="kft-HU-AwQ" secondAttribute="trailingMargin" id="Ejs-qJ-B1s"/>
                                                 <constraint firstItem="I5S-Dr-nIK" firstAttribute="width" secondItem="NBp-hk-ghz" secondAttribute="width" id="GCA-2V-RpA"/>
                                                 <constraint firstItem="I5S-Dr-nIK" firstAttribute="top" secondItem="tMR-IW-eRG" secondAttribute="bottom" id="H4e-uD-jtE"/>
                                                 <constraint firstItem="tMR-IW-eRG" firstAttribute="leading" secondItem="UrP-tA-ejP" secondAttribute="trailing" constant="8" id="HYG-Hl-YJL"/>
+                                                <constraint firstItem="ksR-HI-6y3" firstAttribute="height" secondItem="NBp-hk-ghz" secondAttribute="height" id="JEE-hL-5E7"/>
+                                                <constraint firstItem="tEZ-4G-YRq" firstAttribute="top" secondItem="ksR-HI-6y3" secondAttribute="bottom" constant="8" id="PIA-Qu-nlc"/>
                                                 <constraint firstItem="UrP-tA-ejP" firstAttribute="leading" secondItem="kft-HU-AwQ" secondAttribute="leadingMargin" id="RI7-h3-auh"/>
+                                                <constraint firstItem="ksR-HI-6y3" firstAttribute="trailing" secondItem="kft-HU-AwQ" secondAttribute="trailingMargin" id="SST-hY-lhR"/>
                                                 <constraint firstItem="I5S-Dr-nIK" firstAttribute="top" secondItem="tMR-IW-eRG" secondAttribute="bottom" id="WTN-53-wMB"/>
                                                 <constraint firstItem="I5S-Dr-nIK" firstAttribute="leading" secondItem="UrP-tA-ejP" secondAttribute="trailing" constant="8" id="b6D-C1-xbX"/>
                                                 <constraint firstItem="NBp-hk-ghz" firstAttribute="top" secondItem="kft-HU-AwQ" secondAttribute="topMargin" id="fWf-u5-1Fi"/>
                                                 <constraint firstItem="NBp-hk-ghz" firstAttribute="leading" secondItem="UrP-tA-ejP" secondAttribute="trailing" constant="8" id="j8F-wL-g2q"/>
                                                 <constraint firstItem="tMR-IW-eRG" firstAttribute="top" secondItem="NBp-hk-ghz" secondAttribute="bottom" id="l9f-af-rUO"/>
                                                 <constraint firstItem="tMR-IW-eRG" firstAttribute="width" secondItem="NBp-hk-ghz" secondAttribute="width" id="q4J-vP-3bE"/>
+                                                <constraint firstItem="tEZ-4G-YRq" firstAttribute="centerY" secondItem="kft-HU-AwQ" secondAttribute="centerY" id="sWY-n9-WXY"/>
+                                                <constraint firstItem="tEZ-4G-YRq" firstAttribute="top" secondItem="ksR-HI-6y3" secondAttribute="bottom" id="vKQ-LQ-kQx"/>
                                                 <constraint firstItem="UrP-tA-ejP" firstAttribute="centerY" secondItem="kft-HU-AwQ" secondAttribute="centerY" id="wkg-kH-4b5"/>
                                             </constraints>
                                             <variation key="default">
@@ -675,12 +700,17 @@
                                                     <exclude reference="l9f-af-rUO"/>
                                                     <exclude reference="EHx-6r-OnP"/>
                                                     <exclude reference="H4e-uD-jtE"/>
+                                                    <exclude reference="C9Q-v7-ghB"/>
+                                                    <exclude reference="JEE-hL-5E7"/>
+                                                    <exclude reference="sWY-n9-WXY"/>
+                                                    <exclude reference="vKQ-LQ-kQx"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="employeeImageView" destination="UrP-tA-ejP" id="odH-Mx-dm9"/>
                                             <outlet property="gradeAndProjectLabel" destination="tMR-IW-eRG" id="eMy-IB-RLq"/>
+                                            <outlet property="joinDateLabel" destination="ksR-HI-6y3" id="pVK-2b-P0T"/>
                                             <outlet property="locationAndPhoneLabel" destination="I5S-Dr-nIK" id="Nhy-pJ-zcR"/>
                                             <outlet property="nameLabel" destination="NBp-hk-ghz" id="zHu-hl-fRt"/>
                                             <segue destination="RHz-Ri-UGd" kind="show" id="YGL-1i-dZT"/>
@@ -952,6 +982,7 @@
         <image name="Sorting Answers Filled" width="25" height="25"/>
         <image name="checked_checkbox" width="24" height="24"/>
         <image name="filter_icon" width="25" height="25"/>
+        <image name="forward_icon" width="30" height="30"/>
         <image name="password_icon" width="24" height="24"/>
         <image name="plus_icon" width="55" height="55"/>
         <image name="search_icon" width="25" height="25"/>

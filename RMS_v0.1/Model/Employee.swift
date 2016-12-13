@@ -15,12 +15,14 @@ struct Employee{
     var project: String?
     var location: String?
     var phone: String?
+    var joinDate : NSDate?
     
-    init(name: String?, grade: String?, project: String?, location: String?, phone: String?){
+    init(name: String?, grade: String?, project: String?, location: String?, phone: String?, joinDate: NSDate?){
         self.name = name
         self.grade = grade
         self.project = project
         self.location = location
         self.phone = phone
+        self.joinDate = joinDate
     }
 }

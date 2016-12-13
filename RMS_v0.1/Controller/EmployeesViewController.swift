@@ -14,15 +14,18 @@ class EmployeesViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var employeeCounter: UITextField!
     
     var employees:[Employee] = [
-        Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917"),
-        Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917"),
-        Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917")
+        Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917", joinDate: NSDate()),
+        Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917", joinDate: NSDate()),
+        Employee(name: "Zulfikar", grade: "PG", project: "CDC", location: "Bandung", phone:"085721710917", joinDate: NSDate())
     ]
     
     override func viewDidLoad() {
         employeesTableView.delegate = self
         employeesTableView.dataSource = self
         employeeCounter.text = String(employees.count)
+        
+        let currentDate = NSDate()
+        print(currentDate)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
