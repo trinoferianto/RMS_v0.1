@@ -23,9 +23,6 @@ class EmployeesViewController: UIViewController, UITableViewDataSource, UITableV
         employeesTableView.delegate = self
         employeesTableView.dataSource = self
         employeeCounter.text = String(employees.count)
-        
-        let currentDate = NSDate()
-        print(currentDate)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -241,7 +241,7 @@
         <!--Grade History-->
         <scene sceneID="SHP-ce-sMh">
             <objects>
-                <viewController id="MB7-2F-fUM" sceneMemberID="viewController">
+                <viewController id="MB7-2F-fUM" customClass="GradeHistoriesViewController" customModule="RMS_v0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vAV-cX-7H4"/>
                         <viewControllerLayoutGuide type="bottom" id="b7G-3U-yPD"/>
@@ -249,9 +249,117 @@
                     <view key="view" contentMode="scaleToFill" id="DbO-MC-dfE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuD-3x-Oyt">
+                                <rect key="frame" x="20" y="70" width="560" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zulfikar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a23-zc-orQ">
+                                        <rect key="frame" x="83" y="16" width="64" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Mobile Solution" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvc-fn-oKF">
+                                        <rect key="frame" x="83" y="55" width="155" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="4kp-5k-6ey"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username_icon" translatesAutoresizingMaskIntoConstraints="NO" id="iUS-vr-VN1">
+                                        <rect key="frame" x="-20" y="18" width="103" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="QgX-N2-Vcw"/>
+                                            <constraint firstAttribute="height" constant="58" id="kT0-wT-eIs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SE-PG" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51Q-pu-qtV">
+                                        <rect key="frame" x="509" y="55" width="43" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47450980390000003" green="0.52549019610000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iUS-vr-VN1" firstAttribute="leading" secondItem="OuD-3x-Oyt" secondAttribute="leading" constant="-20" id="4h3-gC-YNM"/>
+                                    <constraint firstItem="dvc-fn-oKF" firstAttribute="top" secondItem="a23-zc-orQ" secondAttribute="bottom" constant="18" id="6RU-sX-ION"/>
+                                    <constraint firstItem="a23-zc-orQ" firstAttribute="leading" secondItem="iUS-vr-VN1" secondAttribute="trailing" id="H9q-6M-8cD"/>
+                                    <constraint firstItem="iUS-vr-VN1" firstAttribute="top" secondItem="OuD-3x-Oyt" secondAttribute="top" constant="18" id="KtR-hV-cKX"/>
+                                    <constraint firstItem="a23-zc-orQ" firstAttribute="top" secondItem="OuD-3x-Oyt" secondAttribute="top" constant="16" id="Pal-vf-Je4"/>
+                                    <constraint firstItem="a23-zc-orQ" firstAttribute="leading" secondItem="iUS-vr-VN1" secondAttribute="trailing" id="Sql-4D-XRw"/>
+                                    <constraint firstItem="a23-zc-orQ" firstAttribute="leading" secondItem="iUS-vr-VN1" secondAttribute="trailing" id="Szx-Vk-BMS"/>
+                                    <constraint firstAttribute="height" constant="96" id="VrH-ih-Bla"/>
+                                    <constraint firstAttribute="trailing" secondItem="51Q-pu-qtV" secondAttribute="trailing" constant="8" id="WwH-aA-iRX"/>
+                                    <constraint firstItem="51Q-pu-qtV" firstAttribute="top" secondItem="a23-zc-orQ" secondAttribute="bottom" constant="18" id="YTl-pR-zdU"/>
+                                    <constraint firstItem="a23-zc-orQ" firstAttribute="leading" secondItem="iUS-vr-VN1" secondAttribute="trailing" id="fBQ-r1-9qi"/>
+                                    <constraint firstItem="dvc-fn-oKF" firstAttribute="leading" secondItem="iUS-vr-VN1" secondAttribute="trailing" id="x90-od-SQm"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-tc-4jg">
+                                <rect key="frame" x="20" y="166" width="560" height="434"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GradeHistoryCell" id="gUl-76-mKT" customClass="GradeHistoryCell" customModule="RMS_v0_1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gUl-76-mKT" id="plY-jR-3KK">
+                                            <rect key="frame" x="0.0" y="0.0" width="527" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMV-ob-ebn">
+                                                    <rect key="frame" x="8" y="8" width="200" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="9xz-YD-Gij"/>
+                                                        <constraint firstAttribute="width" constant="200" id="mev-EU-U10"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartDateAndEndDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJG-WQ-9TL">
+                                                    <rect key="frame" x="8" y="37" width="200" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="Bbu-uq-eMD"/>
+                                                        <constraint firstAttribute="height" constant="21" id="QHW-vt-4jo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MJG-WQ-9TL" firstAttribute="leading" secondItem="plY-jR-3KK" secondAttribute="leadingMargin" id="3n6-xh-olD"/>
+                                                <constraint firstItem="KMV-ob-ebn" firstAttribute="leading" secondItem="plY-jR-3KK" secondAttribute="leadingMargin" id="4dW-rT-3Hm"/>
+                                                <constraint firstItem="KMV-ob-ebn" firstAttribute="top" secondItem="plY-jR-3KK" secondAttribute="topMargin" id="fpC-VX-EKH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MJG-WQ-9TL" secondAttribute="bottom" constant="3" id="sgQ-yi-DGZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="gradeLabel" destination="KMV-ob-ebn" id="b58-Au-uEu"/>
+                                            <outlet property="startDateAndEndDateLabel" destination="MJG-WQ-9TL" id="XcT-pj-J9L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wlA-tc-4jg" firstAttribute="top" secondItem="OuD-3x-Oyt" secondAttribute="bottom" id="CL2-CT-h5b"/>
+                            <constraint firstItem="wlA-tc-4jg" firstAttribute="leading" secondItem="DbO-MC-dfE" secondAttribute="leadingMargin" id="OEh-3X-LiQ"/>
+                            <constraint firstItem="OuD-3x-Oyt" firstAttribute="trailing" secondItem="DbO-MC-dfE" secondAttribute="trailingMargin" id="OuG-r5-cro"/>
+                            <constraint firstItem="wlA-tc-4jg" firstAttribute="trailing" secondItem="DbO-MC-dfE" secondAttribute="trailingMargin" id="cGP-me-ZoG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="wlA-tc-4jg" secondAttribute="bottom" id="dQ4-xd-egk"/>
+                            <constraint firstItem="OuD-3x-Oyt" firstAttribute="leading" secondItem="DbO-MC-dfE" secondAttribute="leadingMargin" id="h1R-Db-dgV"/>
+                            <constraint firstItem="OuD-3x-Oyt" firstAttribute="top" secondItem="vAV-cX-7H4" secondAttribute="bottom" constant="6" id="jIP-eg-PYq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Grade History" image="username_icon" id="Hh4-az-bLM"/>
+                    <connections>
+                        <outlet property="gradeHistoriesTableView" destination="wlA-tc-4jg" id="MuM-G4-R3e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suX-59-88s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

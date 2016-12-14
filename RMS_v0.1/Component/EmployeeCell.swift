@@ -23,7 +23,6 @@ class EmployeeCell: UITableViewCell {
             
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "dd MMM yyyy"
-            //            dateFormatter.dateStyle = NSDateFormatterStyle.FullStyle
             joinDateLabel.text = dateFormatter.stringFromDate(employee.joinDate!)
         }
     }
