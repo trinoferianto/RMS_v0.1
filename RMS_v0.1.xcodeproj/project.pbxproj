@@ -19,6 +19,9 @@
 		C05D5ECA1E00EC1C006D81BC /* Dependent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D5EC91E00EC1C006D81BC /* Dependent.swift */; };
 		C05D5ECC1E00ECB9006D81BC /* DependentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D5ECB1E00ECB9006D81BC /* DependentCell.swift */; };
 		C05D5ECE1E00ED07006D81BC /* DependentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D5ECD1E00ED07006D81BC /* DependentsViewController.swift */; };
+		C0F771541E01125900B7F477 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F771531E01125900B7F477 /* Address.swift */; };
+		C0F771561E01130F00B7F477 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F771551E01130F00B7F477 /* AddressCell.swift */; };
+		C0F771581E01135D00B7F477 /* AddressesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F771571E01135D00B7F477 /* AddressesViewController.swift */; };
 		CF1FDEE91DF64E9700277839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1FDEE81DF64E9700277839 /* AppDelegate.swift */; };
 		CF1FDEEE1DF64E9700277839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1FDEEC1DF64E9700277839 /* Main.storyboard */; };
 		CF1FDEF01DF64E9700277839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1FDEEF1DF64E9700277839 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		C05D5EC91E00EC1C006D81BC /* Dependent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependent.swift; sourceTree = "<group>"; };
 		C05D5ECB1E00ECB9006D81BC /* DependentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependentCell.swift; sourceTree = "<group>"; };
 		C05D5ECD1E00ED07006D81BC /* DependentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependentsViewController.swift; sourceTree = "<group>"; };
+		C0F771531E01125900B7F477 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		C0F771551E01130F00B7F477 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		C0F771571E01135D00B7F477 /* AddressesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressesViewController.swift; sourceTree = "<group>"; };
 		CF1FDEE51DF64E9700277839 /* RMS_v0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMS_v0.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1FDEE81DF64E9700277839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF1FDEED1DF64E9700277839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 				5D24BB061DF9456100A7AFE7 /* ViewController.swift */,
 				C05D5EC71E00DBD3006D81BC /* GradeHistoriesViewController.swift */,
 				C05D5ECD1E00ED07006D81BC /* DependentsViewController.swift */,
+				C0F771571E01135D00B7F477 /* AddressesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -76,6 +83,7 @@
 				5D24BB0C1DF9458100A7AFE7 /* CustomTextField.swift */,
 				C05D5EC31E00DA20006D81BC /* GradeHistoryCell.swift */,
 				C05D5ECB1E00ECB9006D81BC /* DependentCell.swift */,
+				C0F771551E01130F00B7F477 /* AddressCell.swift */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -86,6 +94,7 @@
 				5D24BB101DF945B400A7AFE7 /* Employee.swift */,
 				C05D5EC51E00DA2C006D81BC /* GradeHistory.swift */,
 				C05D5EC91E00EC1C006D81BC /* Dependent.swift */,
+				C0F771531E01125900B7F477 /* Address.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -201,11 +210,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D24BB0E1DF9458100A7AFE7 /* CustomTextField.swift in Sources */,
+				C0F771561E01130F00B7F477 /* AddressCell.swift in Sources */,
 				5D24BB091DF9456100A7AFE7 /* ViewController.swift in Sources */,
 				CF1FDEE91DF64E9700277839 /* AppDelegate.swift in Sources */,
 				C05D5EC81E00DBD3006D81BC /* GradeHistoriesViewController.swift in Sources */,
+				C0F771581E01135D00B7F477 /* AddressesViewController.swift in Sources */,
 				C05D5ECA1E00EC1C006D81BC /* Dependent.swift in Sources */,
 				C05D5EC61E00DA2C006D81BC /* GradeHistory.swift in Sources */,
+				C0F771541E01125900B7F477 /* Address.swift in Sources */,
 				5D24BB111DF945B400A7AFE7 /* Employee.swift in Sources */,
 				5D24BB0D1DF9458100A7AFE7 /* EmployeeCell.swift in Sources */,
 				5D24BB081DF9456100A7AFE7 /* EmployeesViewController.swift in Sources */,
