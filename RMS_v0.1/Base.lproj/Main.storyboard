@@ -953,26 +953,103 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccT-Z7-agR">
+                                        <rect key="frame" x="0.0" y="179" width="320" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="2gP-bx-DhR"/>
+                                            <constraint firstAttribute="height" constant="200" id="NPk-3P-T3g"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="NPk-3P-T3g"/>
+                                            </mask>
+                                        </variation>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-gI-7zz">
+                                        <rect key="frame" x="124" y="72" width="180" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="DS Value"/>
+                                        <connections>
+                                            <action selector="showOrHideDsPickerView:" destination="NBX-3W-nuE" eventType="touchUpInside" id="v7q-Mf-E0Z"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4P-Nu-Gqg">
+                                        <rect key="frame" x="124" y="113" width="180" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7P-VM-AJr">
+                                        <rect key="frame" x="124" y="146" width="180" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Start Date Value"/>
+                                        <connections>
+                                            <action selector="showOrHideStartDatePicker:" destination="NBX-3W-nuE" eventType="touchUpInside" id="xwP-no-YRV"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ydc-ja-V92">
+                                        <rect key="frame" x="0.0" y="179" width="320" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="XF7-3R-lh5"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="503479579.600676">
+                                            <!--2016-12-15 07:26:19 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="onStartDatePickerSelect:" destination="NBX-3W-nuE" eventType="valueChanged" id="cyT-z5-TlE"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-CG-pZS">
+                                        <rect key="frame" x="146" y="359" width="30" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="hideDsPickerViewOrStartDatePicker:" destination="NBX-3W-nuE" eventType="touchUpInside" id="qy7-ct-DAl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="a4P-Nu-Gqg" firstAttribute="leading" secondItem="f5Z-Ln-m3n" secondAttribute="trailing" constant="8" id="2B6-AK-p9A"/>
+                                    <constraint firstItem="t7P-VM-AJr" firstAttribute="leading" secondItem="Knc-L7-oNS" secondAttribute="trailing" constant="8" id="2uL-gj-oxC"/>
                                     <constraint firstAttribute="height" constant="440" id="4Yo-Wv-Itt"/>
+                                    <constraint firstItem="ccT-Z7-agR" firstAttribute="top" secondItem="Knc-L7-oNS" secondAttribute="bottom" constant="8" id="5ym-Iu-gjG"/>
                                     <constraint firstItem="pVX-NY-hcq" firstAttribute="leading" secondItem="LtA-Av-eeV" secondAttribute="trailing" constant="8" id="7WJ-hF-Rjz"/>
+                                    <constraint firstItem="Cya-gI-7zz" firstAttribute="leading" secondItem="dEZ-lj-QH0" secondAttribute="trailing" constant="8" id="7gH-2y-scD"/>
                                     <constraint firstItem="dEZ-lj-QH0" firstAttribute="top" secondItem="QP4-bw-akd" secondAttribute="bottom" constant="16" id="7rk-pz-9vc"/>
+                                    <constraint firstItem="t7P-VM-AJr" firstAttribute="top" secondItem="a4P-Nu-Gqg" secondAttribute="bottom" constant="12" id="7wG-iJ-peu"/>
+                                    <constraint firstItem="Kiz-CG-pZS" firstAttribute="centerX" secondItem="n34-7M-vpR" secondAttribute="centerX" id="D0P-ep-o97"/>
+                                    <constraint firstItem="ccT-Z7-agR" firstAttribute="centerX" secondItem="n34-7M-vpR" secondAttribute="centerX" id="D1m-Tl-9Wu"/>
                                     <constraint firstItem="QP4-bw-akd" firstAttribute="leading" secondItem="n34-7M-vpR" secondAttribute="leading" id="HLn-PL-nRw"/>
                                     <constraint firstAttribute="trailing" secondItem="pVX-NY-hcq" secondAttribute="trailing" constant="16" id="JIY-f6-4U8"/>
+                                    <constraint firstItem="Ydc-ja-V92" firstAttribute="top" secondItem="Knc-L7-oNS" secondAttribute="bottom" constant="8" id="KUo-5y-TZQ"/>
+                                    <constraint firstItem="Kiz-CG-pZS" firstAttribute="top" secondItem="Ydc-ja-V92" secondAttribute="bottom" id="LIW-uZ-zVV"/>
                                     <constraint firstItem="f5Z-Ln-m3n" firstAttribute="leading" secondItem="n34-7M-vpR" secondAttribute="leading" constant="16" id="PI4-1a-VCb"/>
                                     <constraint firstAttribute="trailing" secondItem="QP4-bw-akd" secondAttribute="trailing" id="UlN-03-DCA"/>
+                                    <constraint firstAttribute="trailing" secondItem="a4P-Nu-Gqg" secondAttribute="trailing" constant="16" id="VOX-hU-lSv"/>
                                     <constraint firstItem="f5Z-Ln-m3n" firstAttribute="top" secondItem="dEZ-lj-QH0" secondAttribute="bottom" constant="16" id="Z0x-Ft-3gv"/>
+                                    <constraint firstItem="a4P-Nu-Gqg" firstAttribute="top" secondItem="Cya-gI-7zz" secondAttribute="bottom" constant="8" id="ZLh-qM-jRg"/>
                                     <constraint firstAttribute="bottom" secondItem="LtA-Av-eeV" secondAttribute="bottom" constant="16" id="Zvm-Pw-Q0H"/>
                                     <constraint firstItem="Knc-L7-oNS" firstAttribute="top" secondItem="f5Z-Ln-m3n" secondAttribute="bottom" constant="16" id="bZo-i9-Jqq"/>
+                                    <constraint firstAttribute="trailing" secondItem="t7P-VM-AJr" secondAttribute="trailing" constant="16" id="bqK-se-z0z"/>
+                                    <constraint firstItem="Cya-gI-7zz" firstAttribute="top" secondItem="QP4-bw-akd" secondAttribute="bottom" constant="12" id="dg9-ud-JOV"/>
                                     <constraint firstItem="QP4-bw-akd" firstAttribute="centerX" secondItem="n34-7M-vpR" secondAttribute="centerX" id="eTi-0Q-gk0"/>
                                     <constraint firstItem="Knc-L7-oNS" firstAttribute="leading" secondItem="n34-7M-vpR" secondAttribute="leading" constant="16" id="h5C-M0-7sK"/>
+                                    <constraint firstItem="t7P-VM-AJr" firstAttribute="leading" secondItem="Knc-L7-oNS" secondAttribute="trailing" constant="8" id="iF6-sB-ESM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cya-gI-7zz" secondAttribute="trailing" constant="16" id="mEf-L4-05X"/>
+                                    <constraint firstItem="Ydc-ja-V92" firstAttribute="top" secondItem="t7P-VM-AJr" secondAttribute="bottom" constant="3" id="mM6-hm-w9M"/>
+                                    <constraint firstItem="Ydc-ja-V92" firstAttribute="centerX" secondItem="n34-7M-vpR" secondAttribute="centerX" id="nlk-9S-ahs"/>
                                     <constraint firstItem="dEZ-lj-QH0" firstAttribute="leading" secondItem="n34-7M-vpR" secondAttribute="leading" constant="16" id="qZ5-gG-mWT"/>
                                     <constraint firstItem="QP4-bw-akd" firstAttribute="top" secondItem="n34-7M-vpR" secondAttribute="top" id="rdr-mc-gTI"/>
                                     <constraint firstAttribute="bottom" secondItem="pVX-NY-hcq" secondAttribute="bottom" constant="16" id="s7x-gl-xGV"/>
                                     <constraint firstAttribute="width" constant="320" id="uVD-aF-Yvn"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mM6-hm-w9M"/>
+                                        <exclude reference="2uL-gj-oxC"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -981,6 +1058,14 @@
                             <constraint firstItem="n34-7M-vpR" firstAttribute="centerY" secondItem="rRk-Aw-HQW" secondAttribute="centerY" id="atI-zP-nmC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="Kiz-CG-pZS" id="wec-L8-9YF"/>
+                        <outlet property="dsPickerView" destination="ccT-Z7-agR" id="lW4-kz-hDs"/>
+                        <outlet property="dsValueButton" destination="Cya-gI-7zz" id="vvw-8Z-z69"/>
+                        <outlet property="gradeValueLabel" destination="a4P-Nu-Gqg" id="7Vn-Lf-t6C"/>
+                        <outlet property="startDateButton" destination="t7P-VM-AJr" id="DIk-zo-Has"/>
+                        <outlet property="startDatePicker" destination="Ydc-ja-V92" id="sP0-2A-Yhc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0Q-MZ-9WX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
