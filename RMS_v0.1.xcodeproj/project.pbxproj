@@ -18,6 +18,7 @@
 		C056A2441E022B5E00F8A073 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2431E022B5E00F8A073 /* Location.swift */; };
 		C056A2461E022E7E00F8A073 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2451E022E7E00F8A073 /* LocationCell.swift */; };
 		C056A2481E022F2B00F8A073 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2471E022F2B00F8A073 /* LocationsViewController.swift */; };
+		C056A24A1E023B0A00F8A073 /* CreateGradeHistoryPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056A2491E023B0A00F8A073 /* CreateGradeHistoryPopupViewController.swift */; };
 		C05D5EC41E00DA20006D81BC /* GradeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D5EC31E00DA20006D81BC /* GradeHistoryCell.swift */; };
 		C05D5EC61E00DA2C006D81BC /* GradeHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D5EC51E00DA2C006D81BC /* GradeHistory.swift */; };
 		C05D5EC81E00DBD3006D81BC /* GradeHistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D5EC71E00DBD3006D81BC /* GradeHistoriesViewController.swift */; };
@@ -45,6 +46,7 @@
 		C056A2431E022B5E00F8A073 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C056A2451E022E7E00F8A073 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		C056A2471E022F2B00F8A073 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		C056A2491E023B0A00F8A073 /* CreateGradeHistoryPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGradeHistoryPopupViewController.swift; sourceTree = "<group>"; };
 		C05D5EC31E00DA20006D81BC /* GradeHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeHistoryCell.swift; sourceTree = "<group>"; };
 		C05D5EC51E00DA2C006D81BC /* GradeHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeHistory.swift; sourceTree = "<group>"; };
 		C05D5EC71E00DBD3006D81BC /* GradeHistoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeHistoriesViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				C05D5ECD1E00ED07006D81BC /* DependentsViewController.swift */,
 				C0F771571E01135D00B7F477 /* AddressesViewController.swift */,
 				C056A2471E022F2B00F8A073 /* LocationsViewController.swift */,
+				C056A2491E023B0A00F8A073 /* CreateGradeHistoryPopupViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				C0F771581E01135D00B7F477 /* AddressesViewController.swift in Sources */,
 				C056A2461E022E7E00F8A073 /* LocationCell.swift in Sources */,
 				C05D5ECA1E00EC1C006D81BC /* Dependent.swift in Sources */,
+				C056A24A1E023B0A00F8A073 /* CreateGradeHistoryPopupViewController.swift in Sources */,
 				C05D5EC61E00DA2C006D81BC /* GradeHistory.swift in Sources */,
 				C0F771541E01125900B7F477 /* Address.swift in Sources */,
 				5D24BB111DF945B400A7AFE7 /* Employee.swift in Sources */,

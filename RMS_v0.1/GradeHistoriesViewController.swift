@@ -26,6 +26,17 @@ class GradeHistoriesViewController: UIViewController, UITableViewDataSource, UIT
         gradeHistories.append( GradeHistory(startDate: dateFormatter.dateFromString("01-07-2013"), endDate: dateFormatter.dateFromString("01-12-2013"), grade: "JP-DS1"))
     }
     
+    
+    @IBAction func showCreateGradeHistoryPopup(sender: AnyObject) {
+        let createGradeHistoryPopup = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CreateGradeHistoryPopup") as! CreateGradeHistoryPopupViewController
+        
+        self.addChildViewController(createGradeHistoryPopup)
+        createGradeHistoryPopup.view.frame = self.view.frame
+        self.view.addSubview(createGradeHistoryPopup.view)
+        createGradeHistoryPopup.didMoveToParentViewController(self)
+        
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gradeHistories.count
     }
