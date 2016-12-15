@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate{
 
     // MARK: Properties
     @IBOutlet weak var usernameTextField: CustomTextField!
@@ -74,5 +74,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // default return value
         return true
     }
+    
 }
 

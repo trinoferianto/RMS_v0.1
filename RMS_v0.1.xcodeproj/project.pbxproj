@@ -13,6 +13,7 @@
 		5D24BB0D1DF9458100A7AFE7 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24BB0B1DF9458100A7AFE7 /* EmployeeCell.swift */; };
 		5D24BB0E1DF9458100A7AFE7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24BB0C1DF9458100A7AFE7 /* CustomTextField.swift */; };
 		5D24BB111DF945B400A7AFE7 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24BB101DF945B400A7AFE7 /* Employee.swift */; };
+		5D301A971E02482100496BE6 /* CreateDetailEmployeeWizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D301A961E02482100496BE6 /* CreateDetailEmployeeWizard.swift */; };
 		5D9524141E01326200A006E2 /* EmploymentHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9524131E01326200A006E2 /* EmploymentHistoryViewController.swift */; };
 		5D9524161E01327100A006E2 /* EmployeeHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9524151E01327100A006E2 /* EmployeeHistory.swift */; };
 		C05D5EC41E00DA20006D81BC /* GradeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D5EC31E00DA20006D81BC /* GradeHistoryCell.swift */; };
@@ -37,6 +38,7 @@
 		5D24BB0B1DF9458100A7AFE7 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeCell.swift; path = Component/EmployeeCell.swift; sourceTree = "<group>"; };
 		5D24BB0C1DF9458100A7AFE7 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = Component/CustomTextField.swift; sourceTree = "<group>"; };
 		5D24BB101DF945B400A7AFE7 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Employee.swift; path = Model/Employee.swift; sourceTree = "<group>"; };
+		5D301A961E02482100496BE6 /* CreateDetailEmployeeWizard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateDetailEmployeeWizard.swift; path = Controller/CreateDetailEmployeeWizard.swift; sourceTree = "<group>"; };
 		5D9524131E01326200A006E2 /* EmploymentHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmploymentHistoryViewController.swift; path = Controller/EmploymentHistoryViewController.swift; sourceTree = "<group>"; };
 		5D9524151E01327100A006E2 /* EmployeeHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeHistory.swift; path = Model/EmployeeHistory.swift; sourceTree = "<group>"; };
 		C05D5EC31E00DA20006D81BC /* GradeHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeHistoryCell.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				C05D5EC71E00DBD3006D81BC /* GradeHistoriesViewController.swift */,
 				C05D5ECD1E00ED07006D81BC /* DependentsViewController.swift */,
 				C0F771571E01135D00B7F477 /* AddressesViewController.swift */,
+				5D301A961E02482100496BE6 /* CreateDetailEmployeeWizard.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				C05D5EC41E00DA20006D81BC /* GradeHistoryCell.swift in Sources */,
 				C05D5ECE1E00ED07006D81BC /* DependentsViewController.swift in Sources */,
 				5D24BB071DF9456100A7AFE7 /* EmployeeDetailViewController.swift in Sources */,
+				5D301A971E02482100496BE6 /* CreateDetailEmployeeWizard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
