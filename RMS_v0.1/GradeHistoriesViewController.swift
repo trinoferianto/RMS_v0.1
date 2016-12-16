@@ -25,7 +25,18 @@ class GradeHistoriesViewController: UIViewController, UITableViewDataSource, UIT
         gradeHistories.append(GradeHistory(startDate: dateFormatter.dateFromString("01-12-2013"), endDate: dateFormatter.dateFromString("01-07-2014"),  ds: "DS 1",grade: "JP"))
         gradeHistories.append( GradeHistory(startDate: dateFormatter.dateFromString("01-07-2013"), endDate: dateFormatter.dateFromString("01-12-2013"), ds: "DS 2", grade: "JP"))
     }
-    
+
+    @IBAction func saveGradeHistory(segue:UIStoryboardSegue){
+        //TODO : Do proper saving using api or local db
+        if let createGradeHistoryPopupViewController = segue.sourceViewController as? CreateGradeHistoryPopupViewController{
+            
+            let gradeHistory = createGradeHistoryPopupViewController.gradeHistory
+            gradeHistories.append(gradeHistory)
+            let indexPath = NSIndexPath(forRow: gradeHistories.count-1, inSection: 0)
+            gradeHistoriesTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            
+        }
+    }
     
     @IBAction func showCreateGradeHistoryPopup(sender: AnyObject) {
         let createGradeHistoryPopup = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CreateGradeHistoryPopup") as! CreateGradeHistoryPopupViewController

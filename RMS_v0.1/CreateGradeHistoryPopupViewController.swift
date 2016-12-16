@@ -17,6 +17,8 @@ class CreateGradeHistoryPopupViewController: UIViewController, UIPickerViewDataS
     @IBOutlet weak var gradeValueLabel: UILabel!
     @IBOutlet weak var popupTitleLabel: UILabel!
     
+    var isDsSet = false
+    var isStartDateSet = false
     var isEdit: Bool = false
     var gradeHistory: GradeHistory = GradeHistory()
     var dsData: [String] = []
@@ -55,6 +57,36 @@ class CreateGradeHistoryPopupViewController: UIViewController, UIPickerViewDataS
         self.showAnimate()
     }
     
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "SaveGradeHistory" {
+            if(!isEdit){
+                if(!isDsSet || !isStartDateSet){
+                    // show an alert
+                    let alert = UIAlertView()
+                    alert.title = "Error"
+                    alert.message = "Please complete your inputs"
+                    alert.addButtonWithTitle("OK")
+                    alert.show()
+                    return false
+                }
+            } 
+        }
+        
+        // default return value
+        return true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SaveGradeHistory"{
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            gradeHistory.ds = dsValueButton.titleLabel?.text
+            gradeHistory.startDate = dateFormatter.dateFromString(startDateButton.titleLabel!.text!)
+            gradeHistory.grade = gradeValueLabel.text
+            removeAnimate()
+            
+        }
+    }
+    
     @IBAction func showOrHideStartDatePicker(sender: AnyObject) {
         if(startDatePicker.hidden){
             startDatePicker.hidden = false
@@ -88,8 +120,8 @@ class CreateGradeHistoryPopupViewController: UIViewController, UIPickerViewDataS
 
     
     @IBAction func onStartDatePickerSelect(sender: AnyObject) {
+        isStartDateSet = true
         dateFormatter.dateFormat = "dd/MM/yyyy"
-    
         startDateButton.setTitle(dateFormatter.stringFromDate(startDatePicker.date), forState: .Normal)
     }
     
@@ -106,6 +138,7 @@ class CreateGradeHistoryPopupViewController: UIViewController, UIPickerViewDataS
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        isDsSet = true
         dsValueButton.setTitle(dsData[row], forState: .Normal)
         setGrade(dsData[row])
     }

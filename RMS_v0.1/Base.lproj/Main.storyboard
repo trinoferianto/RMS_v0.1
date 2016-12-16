@@ -931,6 +931,9 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="CHo-SG-5r5" kind="unwind" identifier="SaveGradeHistory" unwindAction="saveGradeHistory:" id="hgz-aO-1pX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtA-Av-eeV">
                                         <rect key="frame" x="96" y="389" width="100" height="35"/>
@@ -965,14 +968,6 @@
                                             </mask>
                                         </variation>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-gI-7zz">
-                                        <rect key="frame" x="124" y="72" width="180" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="DS Value"/>
-                                        <connections>
-                                            <action selector="showOrHideDsPickerView:" destination="NBX-3W-nuE" eventType="touchUpInside" id="v7q-Mf-E0Z"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4P-Nu-Gqg">
                                         <rect key="frame" x="124" y="113" width="180" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -999,12 +994,20 @@
                                             <action selector="onStartDatePickerSelect:" destination="NBX-3W-nuE" eventType="valueChanged" id="cyT-z5-TlE"/>
                                         </connections>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-CG-pZS">
-                                        <rect key="frame" x="146" y="359" width="30" height="26"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-CG-pZS">
+                                        <rect key="frame" x="145" y="359" width="30" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <state key="normal" title="Done"/>
                                         <connections>
                                             <action selector="hideDsPickerViewOrStartDatePicker:" destination="NBX-3W-nuE" eventType="touchUpInside" id="qy7-ct-DAl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-gI-7zz">
+                                        <rect key="frame" x="124" y="72" width="180" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="DS Value"/>
+                                        <connections>
+                                            <action selector="showOrHideDsPickerView:" destination="NBX-3W-nuE" eventType="touchUpInside" id="v7q-Mf-E0Z"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1069,6 +1072,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0Q-MZ-9WX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CHo-SG-5r5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2344" y="1925"/>
         </scene>
