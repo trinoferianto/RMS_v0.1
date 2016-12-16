@@ -15,14 +15,21 @@ class CreateGradeHistoryPopupViewController: UIViewController, UIPickerViewDataS
     @IBOutlet weak var startDateButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var gradeValueLabel: UILabel!
+    @IBOutlet weak var popupTitleLabel: UILabel!
     
-    
+    var isEdit: Bool = false
+    var gradeHistory: GradeHistory = GradeHistory()
     var dsData: [String] = []
     let dateFormatter = NSDateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        // Initialize popup title
+        if(isEdit){
+            popupTitleLabel.text = "Edit Grade History"
+        }
+        
         // Initialize dsPickerView
         dsPickerView.hidden = true
         dsPickerView.dataSource = self
@@ -35,8 +42,16 @@ class CreateGradeHistoryPopupViewController: UIViewController, UIPickerViewDataS
         // Initialize doneButton
         doneButton.hidden = true
         
-        self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
+        // Initialize data
+        if(isEdit){
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            dsValueButton.setTitle(gradeHistory.ds, forState: .Normal)
+            startDateButton.setTitle(dateFormatter.stringFromDate(gradeHistory.startDate!), forState: .Normal)
+            setGrade(gradeHistory.ds!)
+        }
         
+        // Initialize popup background and animation
+        self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
         self.showAnimate()
     }
     
@@ -134,5 +149,4 @@ class CreateGradeHistoryPopupViewController: UIViewController, UIPickerViewDataS
                 }
         })
     }
-
 }

@@ -21,9 +21,9 @@ class GradeHistoriesViewController: UIViewController, UITableViewDataSource, UIT
         
         dateFormatter.dateFormat = "dd-MM-yyyyy"
         
-        gradeHistories.append(GradeHistory(startDate: dateFormatter.dateFromString("01-07-2014"), endDate: nil, grade: "JP-DS3"))
-        gradeHistories.append(GradeHistory(startDate: dateFormatter.dateFromString("01-12-2013"), endDate: dateFormatter.dateFromString("01-07-2014"), grade: "JP-DS2"))
-        gradeHistories.append( GradeHistory(startDate: dateFormatter.dateFromString("01-07-2013"), endDate: dateFormatter.dateFromString("01-12-2013"), grade: "JP-DS1"))
+        gradeHistories.append(GradeHistory(startDate: dateFormatter.dateFromString("01-07-2014"), endDate: nil, ds: "DS 3", grade: "JP"))
+        gradeHistories.append(GradeHistory(startDate: dateFormatter.dateFromString("01-12-2013"), endDate: dateFormatter.dateFromString("01-07-2014"),  ds: "DS 1",grade: "JP"))
+        gradeHistories.append( GradeHistory(startDate: dateFormatter.dateFromString("01-07-2013"), endDate: dateFormatter.dateFromString("01-12-2013"), ds: "DS 2", grade: "JP"))
     }
     
     
@@ -34,7 +34,20 @@ class GradeHistoriesViewController: UIViewController, UITableViewDataSource, UIT
         createGradeHistoryPopup.view.frame = self.view.frame
         self.view.addSubview(createGradeHistoryPopup.view)
         createGradeHistoryPopup.didMoveToParentViewController(self)
+    }
+    
+    func showEditGradeHistoryPopup(gradeHistory: GradeHistory){
+        let createGradeHistoryPopup = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CreateGradeHistoryPopup") as! CreateGradeHistoryPopupViewController
         
+        // Add information that indicate to show edit popup instead
+        createGradeHistoryPopup.isEdit = true
+        createGradeHistoryPopup.gradeHistory = gradeHistory
+        
+        
+        self.addChildViewController(createGradeHistoryPopup)
+        createGradeHistoryPopup.view.frame = self.view.frame
+        self.view.addSubview(createGradeHistoryPopup.view)
+        createGradeHistoryPopup.didMoveToParentViewController(self)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,5 +66,9 @@ class GradeHistoriesViewController: UIViewController, UITableViewDataSource, UIT
         cell.gradeHistory = gradeHistory
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        showEditGradeHistoryPopup(gradeHistories[indexPath.row])
     }
 }

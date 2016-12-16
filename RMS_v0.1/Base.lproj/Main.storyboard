@@ -505,7 +505,7 @@
                                                         <constraint firstAttribute="width" constant="200" id="Ycq-gS-DxJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJA-vp-IWN">
@@ -514,7 +514,7 @@
                                                         <constraint firstAttribute="width" constant="200" id="8RS-8y-8Ds"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -790,7 +790,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="527" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMV-ob-ebn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GradeAndDs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMV-ob-ebn">
                                                     <rect key="frame" x="8" y="8" width="200" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="9xz-YD-Gij"/>
@@ -819,7 +819,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="gradeLabel" destination="KMV-ob-ebn" id="b58-Au-uEu"/>
+                                            <outlet property="gradeAndDsLabel" destination="KMV-ob-ebn" id="PHN-ZM-BKG"/>
                                             <outlet property="startDateAndEndDateLabel" destination="MJG-WQ-9TL" id="XcT-pj-J9L"/>
                                         </connections>
                                     </tableViewCell>
@@ -899,7 +899,7 @@
                                             <constraint firstAttribute="width" constant="100" id="ZZ0-dJ-Lgm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5Z-Ln-m3n">
@@ -908,7 +908,7 @@
                                             <constraint firstAttribute="width" constant="100" id="mHC-8E-kiS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knc-L7-oNS">
@@ -917,7 +917,7 @@
                                             <constraint firstAttribute="width" constant="100" id="xJw-e8-zZg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-NY-hcq">
@@ -1063,6 +1063,7 @@
                         <outlet property="dsPickerView" destination="ccT-Z7-agR" id="lW4-kz-hDs"/>
                         <outlet property="dsValueButton" destination="Cya-gI-7zz" id="vvw-8Z-z69"/>
                         <outlet property="gradeValueLabel" destination="a4P-Nu-Gqg" id="7Vn-Lf-t6C"/>
+                        <outlet property="popupTitleLabel" destination="hDY-9P-vL0" id="Ekw-oV-I0n"/>
                         <outlet property="startDateButton" destination="t7P-VM-AJr" id="DIk-zo-Has"/>
                         <outlet property="startDatePicker" destination="Ydc-ja-V92" id="sP0-2A-Yhc"/>
                     </connections>

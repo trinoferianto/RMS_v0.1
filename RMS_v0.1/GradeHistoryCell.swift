@@ -9,12 +9,12 @@
 import UIKit
 
 class GradeHistoryCell : UITableViewCell{
-    @IBOutlet weak var gradeLabel: UILabel!
+    @IBOutlet weak var gradeAndDsLabel: UILabel!
     @IBOutlet weak var startDateAndEndDateLabel: UILabel!
    
     var gradeHistory: GradeHistory!{
         didSet{
-            gradeLabel.text = gradeHistory.grade
+            gradeAndDsLabel.text = gradeHistory.grade! + "-" + gradeHistory.ds!
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "MMMM yyyy"
             
