@@ -31,12 +31,23 @@ class GradeHistoriesViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func saveGradeHistory(segue:UIStoryboardSegue){
         //TODO : Do proper saving using api or local db
         if let createGradeHistoryPopupViewController = segue.sourceViewController as? CreateGradeHistoryPopupViewController{
-            
-            let gradeHistory = createGradeHistoryPopupViewController.gradeHistory
-            gradeHistories.append(gradeHistory)
-            let indexPath = NSIndexPath(forRow: gradeHistories.count-1, inSection: 0)
-            gradeHistoriesTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            
+            let newGradeHistory = createGradeHistoryPopupViewController.gradeHistory
+           
+            if(newGradeHistory.id != nil){
+                // Edit grade history
+                for i in 0...gradeHistories.count - 1{
+                    if gradeHistories[i].id == newGradeHistory.id {
+                        gradeHistories[i] = newGradeHistory
+                        break
+                    }
+                }
+                gradeHistoriesTableView.reloadData()
+            } else {
+                // Add new grade history to array
+                 gradeHistories.append(newGradeHistory)
+                let indexPath = NSIndexPath(forRow: gradeHistories.count-1, inSection: 0)
+                gradeHistoriesTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
         }
     }
     
