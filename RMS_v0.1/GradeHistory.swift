@@ -10,17 +10,21 @@ import Foundation
 
 
 struct GradeHistory {
+    var id: Int?
     var startDate: NSDate?
     var endDate: NSDate?
     var ds: String?
     var grade: String?
+    var employeeId: Int?
     
     init(){}
     
-    init(startDate: NSDate?, endDate: NSDate?, ds: String?, grade: String?){
+    init(id: Int?, startDate: NSDate?, endDate: NSDate?, ds: String?, grade: String?, employeeId: Int?){
+        self.id = id
         self.startDate = startDate
         self.endDate = endDate
         self.ds = ds
         self.grade = grade
+        self.employeeId = employeeId
     }
 }

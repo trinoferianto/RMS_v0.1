@@ -21,9 +21,11 @@ class GradeHistoriesViewController: UIViewController, UITableViewDataSource, UIT
         
         dateFormatter.dateFormat = "dd-MM-yyyyy"
         
-        gradeHistories.append(GradeHistory(startDate: dateFormatter.dateFromString("01-07-2014"), endDate: nil, ds: "DS 3", grade: "JP"))
-        gradeHistories.append(GradeHistory(startDate: dateFormatter.dateFromString("01-12-2013"), endDate: dateFormatter.dateFromString("01-07-2014"),  ds: "DS 1",grade: "JP"))
-        gradeHistories.append( GradeHistory(startDate: dateFormatter.dateFromString("01-07-2013"), endDate: dateFormatter.dateFromString("01-12-2013"), ds: "DS 2", grade: "JP"))
+        gradeHistories.append(GradeHistory(id: 1,startDate: dateFormatter.dateFromString("01-07-2014"), endDate: nil, ds: "DS 3", grade: "JP", employeeId:1))
+        gradeHistories.append(GradeHistory(id: 2,startDate: dateFormatter.dateFromString("01-12-2013"), endDate: dateFormatter.dateFromString("01-07-2014"),  ds: "DS 1",grade: "JP", employeeId:1))
+        gradeHistories.append( GradeHistory(id: 3,startDate: dateFormatter.dateFromString("01-07-2013"), endDate: dateFormatter.dateFromString("01-12-2013"), ds: "DS 2", grade: "JP", employeeId:1))
+        
+        gradeHistoriesTableView.allowsMultipleSelectionDuringEditing = false
     }
 
     @IBAction func saveGradeHistory(segue:UIStoryboardSegue){
@@ -59,6 +61,31 @@ class GradeHistoriesViewController: UIViewController, UITableViewDataSource, UIT
         createGradeHistoryPopup.view.frame = self.view.frame
         self.view.addSubview(createGradeHistoryPopup.view)
         createGradeHistoryPopup.didMoveToParentViewController(self)
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete{
+            let alert = UIAlertController(title: "Are you sure to delete this history stage?", message: "this action cannot be undone", preferredStyle: .Alert)
+            let clearAction = UIAlertAction(title: "Cancel", style: .Destructive) {(alert: UIAlertAction!) -> Void in
+                print("Cancel tapped")
+            }
+            
+            let deleteAction = UIAlertAction(title: "Delete", style: .Default) {(aler:UIAlertAction!) -> Void in
+                print("Delete tapped")
+                // TODO : do proper delete later.
+                self.gradeHistories.removeAtIndex(indexPath.row)
+                self.gradeHistoriesTableView.reloadData()
+            }
+            
+            alert.addAction(clearAction)
+            alert.addAction(deleteAction)
+    
+            presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
